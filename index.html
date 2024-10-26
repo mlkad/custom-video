@@ -6,20 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="player">
-    <video src="clip.mp4" class="video-clip"></video>
-    <div class="controls">
-      <button class="play-button">▶</button>
-      <input type="range" name ="videoProgress" value="40" min="0" max="100" step="1" class="range" id = "progress">
-      <img src="volume.svg" alt="">
-      <input type="range" name = "volume"value="40" min="0" max="100" step="1" class="range" id = "volume"> 
-   
-  
+  <div class="video-container">
+    <video src="media/clip.mp4" class="video-clip"></video>
+    <span class="big-play-button">▶</span>
+    <div class="overlay"></div>
+    <div id="progress-bar" class="progress-bar">
+      <div id="progress" class="progress"></div>
+    </div>
+
+    <div class="controls-container">
+      <div class="control">
+        <button class="play-button">▶</button>
+      </div>
+
+      <div class="control">
+        <span class='current-time'>0:00</span>
+        <span class="slash"> &nbsp/ &nbsp</span>
+        <span class='video-duration'>0:00</span>
+      </div>
+
+      <div class="control">
+        <img class="volume-img" src="./media/volume.svg" alt="">
+        <input type="range" name="volume" value="0.5" min="0" max="1" step="0.1" class="volume" id="volume">
+      </div>
+
+
     </div>
   </div>
+  <footer>
+    <div class="link">
+      <a href="https://github.com/mlkad">
+        <img src="./media/git.png" alt="" width="30" height="30">
+      </a>
+    </div>
+    <div class="link">
+      <span>2024</span>
+    </div>
+    <div class="link">
+      <a href="https://wearecommunity.io/events/js-stage1-2024q4">
+        <img src="./media/rs.png" alt="" width="80px" height="30px">
+      </a>
+    </div>
+  </footer>
   <script src='script.js'></script>
 </body>
 
